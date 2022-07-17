@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.so
 
 import "hardhat/console.sol";
 
+// used for testing 
 contract Harness {
 
     address private _standardProxy;

@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/proxy/transparent/TransparentUpgradeableProxy.so
 
 import "hardhat/console.sol";
 
+// used for testing
 contract StandardProxy is TransparentUpgradeableProxy {
     
     constructor(address logic_, address admin_) TransparentUpgradeableProxy(logic_, admin_, new bytes(0)) {
