@@ -19,6 +19,9 @@ contract MultiProxy is TransparentUpgradeableProxy {
     function setImplementation(bytes4 selector, address implementation_) external ifAdmin {
         // it is assumed that admin tracks whether there are collisions
         // since msg.sig's across contracts may have collisions
+
+        // also it is assumed that the admin ensures that the implementations
+        // respect the storage space of it's fellow implementations
         _implementations[selector] = implementation_; 
     }
 
